@@ -52,7 +52,7 @@ async def test(client, message):
 
 
 @bot.on_callback_query(filters.regex('^done$'))
-async def take_money(client, call):
+async def _(client, call):
     await call.message.delete()
     await call.answer()
 
